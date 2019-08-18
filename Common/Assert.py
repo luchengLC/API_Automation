@@ -35,7 +35,7 @@ class Assertions:
 
     def assert_body(self, body, body_msg, expected_msg):
         """
-        验证response body中任意属性的值
+        验证response body中任意属性的值 ——只能验证第1层
         :param body:
         :param body_msg:
         :param expected_msg:
@@ -73,7 +73,7 @@ class Assertions:
 
     def assert_text(self, body, expected_msg):
         """
-        验证response body中是否等于预期字符串
+        验证response body中是否等于预期字符串————这样比较颗粒度太大了
         :param body:
         :param expected_msg:
         :return:

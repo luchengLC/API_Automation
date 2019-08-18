@@ -12,6 +12,7 @@
 API_ENVIRONMENT_DEBUG = 'debug'
 API_ENVIRONMENT_RELEASE = 'release'
 
+# todo 搞清楚这个list 是预期还是实际？
 # 接口响应时间list，单位毫秒
 STRESS_LIST = []
 

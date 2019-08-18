@@ -25,6 +25,11 @@ level = 'default'
 
 
 def create_file(filename):
+    """
+    新建log文件：log文件 & error log 文件
+    :param filename:
+    :return: None
+    """
     path = filename[0:filename.rfind('/')]
     if not os.path.isdir(path):
         os.makedirs(path)
@@ -36,18 +41,33 @@ def create_file(filename):
 
 
 def set_handler(levels):
+    """
+    根据不同的 日志级别 ，设置不存的存储路径
+    error的放一个文件，其余的另外放一个文件
+    :param levels:
+    :return:
+    """
     if levels == 'error':
         logger.addHandler(MyLog.err_handler)
     logger.addHandler(MyLog.handler)
 
 
 def remove_handler(levels):
+    """
+    用完后清除 各处理器
+    :param levels:
+    :return:
+    """
     if levels == 'error':
         logger.removeHandler(MyLog.err_handler)
     logger.removeHandler(MyLog.handler)
 
 
 def get_current_time():
+    """
+    获取当前时间
+    :return: 当前时间
+    """
     return time.strftime(MyLog.date, time.localtime(time.time()))
 
 
@@ -60,7 +80,9 @@ class MyLog:
     create_file(err_file)
     date = '%Y-%m-%d %H:%M:%S'
 
+    # 将日志输入到路径为log_file的文档处
     handler = logging.FileHandler(log_file, encoding='utf-8')
+    # 将日志输入到路径为err_file的文档处
     err_handler = logging.FileHandler(err_file, encoding='utf-8')
 
     @staticmethod

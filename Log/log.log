@@ -59,3 +59,5 @@
 [INFO 2019-06-03 16:33:16]执行用例集为：--allure_features=Home,Personal
 [INFO 2019-06-03 16:33:20]解析yaml, Path:/Users/wangjuan/workpace/API_Automation/Params/Yaml/Basic.yaml
 [ERROR 2019-06-03 16:33:25]邮件发送失败，请检查邮件配置
+[INFO 2019-08-18 17:22:28]初始化配置文件, path=C:\Users\20503\PycharmProjects\API_Automation\Conf\config.ini
+[ERROR 2019-08-18 17:22:29]邮件发送失败，请检查邮件配置
